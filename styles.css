@@ -367,6 +367,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
 .footer-connect:hover { color: #111; background: #fff; }
 .footer-bottom { min-height: 62px; display: grid; grid-template-columns: 1fr 1fr auto; align-items: end; gap: 20px; border-top: 1px solid rgba(255,255,255,.3); color: #b8b8b1; font-family: var(--mono); font-size: 9px; }
 .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.footer-links a { color: #f7f6f2; font-weight: 700; }
 .footer-links a:hover, .back-top:hover { color: #fff; }
 .back-top { justify-self: end; font-size: 8px; letter-spacing: .1em; }
 
@@ -379,11 +380,11 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
 .contact-panel>p:not(.section-kicker) { max-width: 360px; color: #55554f; font-size: 14px; line-height: 1.7; }
 .contact-options { margin-top: 28px; border-top: 1px solid rgba(0,0,0,.3); }
 .contact-options a { display: grid; grid-template-columns: 75px 1fr 20px; align-items: center; gap: 10px; padding: 18px 0; border-bottom: 1px solid rgba(0,0,0,.3); }
-.contact-options a span { color: #686862; font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
-.contact-options a strong { min-width: 0; overflow-wrap: anywhere; font-size: 13px; font-weight: 500; }
+.contact-options a span { color: var(--ink); font-family: var(--mono); font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.contact-options a strong { min-width: 0; overflow-wrap: anywhere; font-size: 13px; font-weight: 700; }
 .contact-options a b { font-size: 15px; font-weight: 400; }
 .contact-options a:hover strong { text-decoration: underline; text-underline-offset: 4px; }
-.contact-coordinate { margin-top: 30px; color: #777770; font-family: var(--mono); font-size: 8px; letter-spacing: .15em; }
+.contact-coordinate { margin-top: 30px; color: var(--ink); font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: .15em; }
 
 @media (max-width: 1120px) {
   .site-header { grid-template-columns: 1fr auto 1fr; padding-inline: 25px; }

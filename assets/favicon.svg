@@ -1,4 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="16" fill="#0c0c0b"/>
-  <path d="M13 17h28v7H22v8h17v7H22v9h-9zM43 17h8v31h-8z" fill="#f5f4f0"/>
+  <g fill="#f5f4f0" fill-rule="evenodd">
+    <path d="M6 18h6v22h8v6H6z"/>
+    <path d="M22 18h7c8 0 11 5 11 14s-3 14-11 14h-7V18zm6 6v16h1c4 0 5-3 5-8s-1-8-5-8h-1z"/>
+    <path d="M42 18h8c6 0 9 3 9 9 0 4-2 6-5 7l6 12h-7l-5-11v11h-6V18zm6 6v6h2c2 0 3-1 3-3s-1-3-3-3h-2z"/>
+  </g>
 </svg>
