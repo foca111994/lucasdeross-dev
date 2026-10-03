@@ -2,6 +2,17 @@
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   if (!reducedMotion.matches) document.documentElement.classList.add("js-ready");
 
+  const hero = document.querySelector(".hero");
+  let heroVisible = true;
+  const updateHeroMotion = () => hero?.classList.toggle("hero-motion-paused", !heroVisible || document.hidden);
+  if (hero && "IntersectionObserver" in window) {
+    new IntersectionObserver(([entry]) => {
+      heroVisible = entry.isIntersecting;
+      updateHeroMotion();
+    }, { threshold: 0 }).observe(hero);
+  }
+  document.addEventListener("visibilitychange", updateHeroMotion);
+
   const deck = document.querySelector("#projectDeck");
   const cards = [...document.querySelectorAll(".project-card")];
   const menu = document.querySelector("#siteNav");

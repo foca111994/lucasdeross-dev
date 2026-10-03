@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261003b">
+  <link rel="stylesheet" href="styles.css?v=20261003-art1">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -54,8 +54,23 @@
   </header>
 
   <main id="main">
+    <div class="portfolio-scene">
+      <div class="scene-foliage foliage-left" aria-hidden="true"></div>
+      <div class="scene-foliage foliage-right" aria-hidden="true"></div>
+      <div class="scene-light-lines" aria-hidden="true"></div>
     <section class="hero" id="home" aria-labelledby="hero-title">
       <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-stipple stipple-left" aria-hidden="true"></div>
+      <div class="hero-stipple stipple-right" aria-hidden="true"></div>
+      <svg class="hero-drafting" viewBox="0 0 1440 840" preserveAspectRatio="none" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width=".65">
+          <path d="M511 52V628M835 0V652M1018 43V634M498 108H867M519 622H1042M16 591L1391 118M0 495L1330 62"/>
+          <path stroke-dasharray="3 7" d="M12 523L1408 46M475 68L973 721M617 739L1147 119"/>
+          <circle cx="815" cy="408" r="270" stroke-dasharray="1 10"/>
+        </g>
+      </svg>
+      <span class="hero-direction direction-left" aria-hidden="true"></span>
+      <span class="hero-direction direction-right" aria-hidden="true"></span>
       <div class="hero-cross cross-one" aria-hidden="true">+</div>
       <div class="hero-cross cross-two" aria-hidden="true">+</div>
       <div class="hero-cross cross-three" aria-hidden="true">+</div>
@@ -73,10 +88,18 @@
 
       <img class="retro-computer" src="assets/retro-mac.png?v=20261003c" alt="Transparent retro computer with hello on its screen" width="1080" height="1080" fetchpriority="high">
 
-      <h1 class="portfolio-stack" id="hero-title">
-        <span class="portfolio-outline outline-top" aria-hidden="true">PORT</span>
-        <span class="portfolio-solid">PORTFOLIO</span>
-        <span class="portfolio-outline outline-bottom" aria-hidden="true">FOLIO</span>
+      <h1 class="portfolio-stack" id="hero-title" aria-label="Portfolio">
+        <span class="portfolio-ribbon" aria-hidden="true">
+          <span class="portfolio-letter" style="--letter-index:0"><span class="letter-metric">P</span><span class="letter-drum"><span class="letter-face face-0 face-solid">P</span><span class="letter-face face-1 face-outline">P</span><span class="letter-face face-2 face-solid">P</span><span class="letter-face face-3 face-outline">P</span></span></span>
+          <span class="portfolio-letter" style="--letter-index:1"><span class="letter-metric">O</span><span class="letter-drum"><span class="letter-face face-0 face-solid">O</span><span class="letter-face face-1 face-outline">O</span><span class="letter-face face-2 face-solid">O</span><span class="letter-face face-3 face-outline">O</span></span></span>
+          <span class="portfolio-letter" style="--letter-index:2"><span class="letter-metric">R</span><span class="letter-drum"><span class="letter-face face-0 face-solid">R</span><span class="letter-face face-1 face-outline">R</span><span class="letter-face face-2 face-solid">R</span><span class="letter-face face-3 face-outline">R</span></span></span>
+          <span class="portfolio-letter" style="--letter-index:3"><span class="letter-metric">T</span><span class="letter-drum"><span class="letter-face face-0 face-solid">T</span><span class="letter-face face-1 face-outline">T</span><span class="letter-face face-2 face-solid">T</span><span class="letter-face face-3 face-outline">T</span></span></span>
+          <span class="portfolio-letter" style="--letter-index:4"><span class="letter-metric">F</span><span class="letter-drum"><span class="letter-face face-0 face-solid">F</span><span class="letter-face face-1 face-outline">F</span><span class="letter-face face-2 face-solid">F</span><span class="letter-face face-3 face-outline">F</span></span></span>
+          <span class="portfolio-letter" style="--letter-index:5"><span class="letter-metric">O</span><span class="letter-drum"><span class="letter-face face-0 face-solid">O</span><span class="letter-face face-1 face-outline">O</span><span class="letter-face face-2 face-solid">O</span><span class="letter-face face-3 face-outline">O</span></span></span>
+          <span class="portfolio-letter" style="--letter-index:6"><span class="letter-metric">L</span><span class="letter-drum"><span class="letter-face face-0 face-solid">L</span><span class="letter-face face-1 face-outline">L</span><span class="letter-face face-2 face-solid">L</span><span class="letter-face face-3 face-outline">L</span></span></span>
+          <span class="portfolio-letter" style="--letter-index:7"><span class="letter-metric">I</span><span class="letter-drum"><span class="letter-face face-0 face-solid">I</span><span class="letter-face face-1 face-outline">I</span><span class="letter-face face-2 face-solid">I</span><span class="letter-face face-3 face-outline">I</span></span></span>
+          <span class="portfolio-letter" style="--letter-index:8"><span class="letter-metric">O</span><span class="letter-drum"><span class="letter-face face-0 face-solid">O</span><span class="letter-face face-1 face-outline">O</span><span class="letter-face face-2 face-solid">O</span><span class="letter-face face-3 face-outline">O</span></span></span>
+        </span>
       </h1>
 
       <p class="hero-side hero-side-left"><span class="side-rule"></span>LUCAS DE ROSSA</p>
@@ -188,6 +211,15 @@
         </div>
       </div>
 
+      <a class="explore-orbit" href="#selected-work" aria-label="Explore selected work">
+        <svg viewBox="0 0 300 220" aria-hidden="true">
+          <defs><path id="explore-arc" d="M35 91a115 115 0 0 0 230 0"/></defs>
+          <ellipse cx="150" cy="87" rx="139" ry="115" fill="none" stroke="currentColor" stroke-width=".5" opacity=".18"/>
+          <circle cx="150" cy="87" r="68" fill="none" stroke="currentColor" stroke-width=".6" stroke-dasharray="6 6" opacity=".35"/>
+          <text><textPath href="#explore-arc" startOffset="50%" text-anchor="middle">WEBSITES · BRANDS · IDEAS · CODE · REAL PROJECTS</textPath></text>
+        </svg>
+        <span>EXPLORE<br>MY WORK<b aria-hidden="true">⌄</b></span>
+      </a>
       <div class="section-title reveal" id="selected-work">
         <span class="section-number">01</span>
         <h2 id="projects-title"><span>SELECTED</span> <em>WORK</em></h2>
@@ -195,6 +227,8 @@
       </div>
       <p class="projects-caption">SELECT A CARD TO OPEN THE LIVE PROJECT <span aria-hidden="true">↗</span></p>
     </section>
+
+    </div>
 
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="section-kicker"><span>02</span><span>ABOUT</span></div>
@@ -255,6 +289,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=20261003b" defer></script>
+  <script src="script.js?v=20261003-art1" defer></script>
 </body>
 </html>
