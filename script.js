@@ -189,7 +189,7 @@
 
   const updateDeckControls = () => {
     if (!deck || !cards.length) return;
-    const scrollable = deck.scrollWidth > deck.clientWidth + 2;
+    const scrollable = window.matchMedia("(max-width: 820px)").matches && deck.scrollWidth > deck.clientWidth + 2;
     const prev = document.querySelector("[data-deck-prev]");
     const next = document.querySelector("[data-deck-next]");
     if (prev) { prev.hidden = !scrollable; prev.disabled = deck.scrollLeft <= 2; }
