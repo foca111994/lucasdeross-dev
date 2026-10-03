@@ -1,37 +1,29 @@
-# Lucas De Rossa — Web & IT Portfolio
+# Lucas De Rossa | Portfolio
 
-Single-page creative portfolio for Lucas De Rossa.
+Single-page portfolio for Lucas De Rossa, an Advanced Diploma of Information Technology student in Adelaide, Australia.
 
-## Design direction
+## Features
 
-- Minimal black/white editorial look.
-- Animated `PORTFOLIO` typography with a slow, living rhythm.
-- Transparent retro computer floating continuously in the hero.
-- Profile image next to `LDR`, grayscale by default and color on hover.
-- Layered project cards with live website previews.
-- Contact tile reveals `Let's Connect` with an upward hover motion.
-- Email: lucasderossag@gmail.com
-- Phone: 0421 196 341
-
-## Assets still required
-
-Upload these two supplied images to the repository:
-
-- `assets/profile.png` — Lucas profile photo.
-- `assets/retro-mac.png` — transparent retro computer with “hello.” on screen.
-
-The UI is already wired to those exact paths.
+- Editorial monochrome layout with animated portfolio typography and a floating retro computer.
+- Seven project cards with supplied screenshots as instant posters and lazy-loaded live website previews.
+- Preview iframes activate as cards approach the viewport, capped at three simultaneous loads. When reduced motion is preferred, visitors can start previews manually.
+- Responsive horizontal project carousel on mobile, contact dialog, and technical study section.
+- Static HTML, CSS and JavaScript with no build step or runtime dependencies.
 
 ## Projects
 
-- Nicolas Leautier
-- Study Like a Pro
-- Rocket Eleven
-- Clothing Drop Studio
-- The Campervan Man
-- Hello Stranger
-- Bernie's
+- [Nicolas Leautier](https://nicolasleautier.com/)
+- [Study Like a Pro](https://studylikeapro.art/)
+- [Rocket Eleven](https://rocketeleven.net/)
+- [Clothing Drop Studio](https://clothing-drop-studio.pages.dev/)
+- [The Campervan Man](https://the-campervan-man.pages.dev/)
+- [Hello Stranger](https://hello-strange-coffee-shop.lucasderossag.workers.dev/)
+- [Bernie’s](https://bernies-burguer-night.pages.dev/)
 
-## Deploy
+## Deployment
 
-This is a static site. Cloudflare Pages can deploy it directly from the repository root with no build command.
+Cloudflare Pages can deploy this repository from the root with no build command.
+
+## Credits
+
+Contact artwork: Michelangelo, Hands of God and Adam (public domain), via Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Hands_of_God_and_Adam.jpg

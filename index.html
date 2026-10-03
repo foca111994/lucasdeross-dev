@@ -2,148 +2,259 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Lucas De Rossa — Web & IT portfolio.">
-  <title>Lucas De Rossa | Web & IT Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4f0">
+  <meta name="description" content="Web development, IT labs and technical projects by Lucas De Rossa, Advanced Diploma of Information Technology student in Adelaide, Australia.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lucas De Rossa | IT &amp; Web Portfolio">
+  <meta property="og:description" content="Web development, IT labs and technical projects by Lucas De Rossa in Adelaide, Australia.">
+  <meta property="og:image" content="https://lucasderossa.dev/assets/retro-mac.png">
+  <link rel="canonical" href="https://lucasderossa.dev/">
+  <meta property="og:url" content="https://lucasderossa.dev/">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Lucas De Rossa | IT &amp; Web Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="header">
-    <a class="identity" href="#home" aria-label="Home">
+  <header class="site-header">
+    <a class="identity" href="#home" aria-label="Lucas De Rossa home">
       <span class="ldr">LDR</span>
       <span class="avatar-shell">
-        <img src="assets/profile.webp" alt="Lucas De Rossa" class="avatar">
-        <small>hover for color</small>
+        <img src="assets/profile.webp" alt="Lucas De Rossa" class="avatar" width="360" height="480">
+        <span class="avatar-note" aria-hidden="true">
+          <svg viewBox="0 0 72 30"><path d="M2 4c17 0 18 20 42 20 9 0 16-4 22-10M58 9l9 5-8 7"/></svg>
+          <span>hover for color</span>
+        </span>
       </span>
     </a>
 
-    <nav class="nav">
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="https://github.com/orgs/lucas-derossa-it/dashboard" target="_blank" rel="noreferrer">GitHub ↗</a>
+    <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
 
-    <button class="connect-tile" type="button" data-contact aria-label="Let's Connect">
-      <span class="connect-art">☞&nbsp;&nbsp;&nbsp;☜</span>
-      <span class="connect-label">Let's Connect</span>
-    </button>
+    <div class="header-actions">
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="siteNav" aria-expanded="false" data-menu-toggle>
+        <span></span><span></span>
+      </button>
+      <button class="connect-surface" type="button" aria-label="Open contact options" aria-haspopup="dialog" aria-controls="contactDialog" data-contact-open>
+        <img src="assets/creation-hands.jpg" alt="" width="356" height="234">
+        <span class="connect-mask"><span>Let’s connect</span></span>
+      </button>
+    </div>
   </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="grid-bg" aria-hidden="true"></div>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-cross cross-one" aria-hidden="true">+</div>
+      <div class="hero-cross cross-two" aria-hidden="true">+</div>
+      <div class="hero-cross cross-three" aria-hidden="true">+</div>
 
+      <svg class="hero-orbit" viewBox="0 0 1440 780" preserveAspectRatio="none" aria-hidden="true">
+        <ellipse cx="720" cy="385" rx="520" ry="185" transform="rotate(-13 720 385)"></ellipse>
+        <path d="M168 508C350 480 380 270 621 219S1030 204 1261 275"></path>
+        <circle cx="285" cy="398" r="7"></circle>
+        <circle cx="1083" cy="290" r="7"></circle>
+        <circle cx="719" cy="178" r="8"></circle>
+      </svg>
+
+      <div class="hero-index"><span class="index-dot"></span><span>IDEAS<br>CODE<br>REAL THINGS</span></div>
       <p class="hero-kicker">WELCOME TO MY</p>
 
-      <div class="portfolio-stack" aria-label="Portfolio">
-        <div class="portfolio-row outline">PORTFOLIO</div>
-        <div class="portfolio-row solid">PORTFOLIO</div>
-        <div class="portfolio-row outline">PORTFOLIO</div>
+      <img class="retro-computer" src="assets/retro-mac.png" alt="Transparent retro computer with hello on its screen" width="1080" height="1080" fetchpriority="high">
+
+      <h1 class="portfolio-stack" id="hero-title">
+        <span class="portfolio-outline outline-top" aria-hidden="true">PORT</span>
+        <span class="portfolio-solid">PORTFOLIO</span>
+        <span class="portfolio-outline outline-bottom" aria-hidden="true">FOLIO</span>
+      </h1>
+
+      <p class="hero-side hero-side-left"><span class="side-rule"></span>LUCAS DE ROSSA</p>
+      <p class="hero-side hero-side-right"><span class="side-rule"></span>WEB PROJECTS · IT STUDENT<br>CREATIVE BUILDER</p>
+
+      <div class="hero-copy">
+        <p>I build websites and technical projects<br class="desktop-break"> that turn ideas into real experiences.</p>
+        <div class="hero-actions-main">
+          <a class="pill-button pill-dark" href="#projects">View projects <span aria-hidden="true">↘</span></a>
+          <a class="pill-button pill-light" href="https://github.com/orgs/lucas-derossa-it/dashboard" target="_blank" rel="noopener noreferrer">
+            <svg class="github-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.08c-3.1.67-3.76-1.31-3.76-1.31-.51-1.3-1.24-1.65-1.24-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.62 1.22 3.26.94.1-.73.39-1.22.71-1.5-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.16-3-.12-.29-.5-1.42.11-2.96 0 0 .95-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.1-1.44 3.05-1.14 3.05-1.14.61 1.54.23 2.67.11 2.96.72.78 1.16 1.78 1.16 3 0 4.29-2.61 5.23-5.1 5.51.4.35.76 1.03.76 2.08v3.06c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>
+            GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </div>
 
-      <img class="retro-computer" src="assets/retro-mac.png" alt="Transparent retro computer">
+      <a class="hero-scroll" href="#projects" aria-label="Scroll to projects">
+        <span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span aria-hidden="true">↓</span>
+      </a>
+    </section>
 
-      <p class="hero-side left">LUCAS DE ROSSA</p>
-      <p class="hero-side right">WEB PROJECTS · IT STUDENT<br>CREATIVE BUILDER</p>
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <div class="deck-stage">
+        <div class="project-deck" id="projectDeck">
+          <article class="project-card card-nicolas" style="--fan-rotate:-11deg;--fan-y:44px;--fan-order:1">
+            <div class="project-media">
+              <img class="project-poster" src="assets/projects/nicolas-leautier.webp" alt="Nicolas Leautier portfolio homepage showing the photographer at work" width="760" height="428" loading="lazy" decoding="async">
+              <iframe title="Live preview of Nicolas Leautier’s portfolio" data-preview-src="https://nicolasleautier.com/" loading="eager" tabindex="-1" aria-hidden="true" allow="autoplay; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+              <span class="live-indicator"><i></i><span data-preview-status>WEBSITE PREVIEW</span></span>
+              <a class="preview-open" href="https://nicolasleautier.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Nicolas Leautier’s portfolio in a new tab"></a>
+              <button class="preview-play" type="button" data-preview-play aria-label="Play live preview of Nicolas Leautier’s portfolio"><span></span></button>
+            </div>
+            <div class="card-info"><span class="card-number">01</span><div><h2>Nicolas Leautier</h2><p>Photographer &amp; videographer portfolio</p></div><a class="card-arrow" href="https://nicolasleautier.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Nicolas Leautier">↗</a></div>
+          </article>
 
-      <div class="hero-bottom">
-        <p>I build websites and technical projects that turn ideas into real experiences.</p>
-        <div class="hero-actions">
-          <a class="btn dark" href="#projects">View projects <span>→</span></a>
-          <a class="btn light" href="https://github.com/orgs/lucas-derossa-it/dashboard" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <article class="project-card card-study" style="--fan-rotate:-7deg;--fan-y:8px;--fan-order:2">
+            <div class="project-media">
+              <img class="project-poster" src="assets/projects/study-like-a-pro.webp" alt="Study Like a Pro free resources page" width="760" height="359" loading="lazy" decoding="async">
+              <iframe title="Live preview of Study Like a Pro" data-preview-src="https://studylikeapro.art/" loading="eager" tabindex="-1" aria-hidden="true" allow="autoplay; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+              <img class="brand-stamp study-stamp" src="assets/projects/study-like-a-pro-sky.webp" alt="" width="760" height="600" loading="lazy" decoding="async">
+              <span class="live-indicator"><i></i><span data-preview-status>WEBSITE PREVIEW</span></span>
+              <a class="preview-open" href="https://studylikeapro.art/" target="_blank" rel="noopener noreferrer" aria-label="Open Study Like a Pro in a new tab"></a>
+              <button class="preview-play" type="button" data-preview-play aria-label="Play live preview of Study Like a Pro"><span></span></button>
+            </div>
+            <div class="card-info"><span class="card-number">02</span><div><h2>Study Like a Pro</h2><p>Bilingual learning platform and study resources</p></div><a class="card-arrow" href="https://studylikeapro.art/" target="_blank" rel="noopener noreferrer" aria-label="Visit Study Like a Pro">↗</a></div>
+          </article>
+
+          <article class="project-card card-rocket" style="--fan-rotate:-3deg;--fan-y:-11px;--fan-order:3">
+            <div class="project-media">
+              <img class="project-poster" src="assets/projects/rocket-eleven.webp" alt="Rocket Eleven hero with a student surrounded by a luminous galaxy" width="760" height="538" loading="lazy" decoding="async">
+              <iframe title="Live preview of the Rocket Eleven web project" data-preview-src="https://rocketeleven.net/" loading="eager" tabindex="-1" aria-hidden="true" allow="autoplay; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+              <span class="live-indicator"><i></i><span data-preview-status>WEBSITE PREVIEW</span></span>
+              <a class="preview-open" href="https://rocketeleven.net/" target="_blank" rel="noopener noreferrer" aria-label="Open the Rocket Eleven project in a new tab"></a>
+              <button class="preview-play" type="button" data-preview-play aria-label="Play live preview of Rocket Eleven"><span></span></button>
+            </div>
+            <div class="card-info"><span class="card-number">03</span><div><h2>Rocket Eleven</h2><p>Personal high-impact web design project</p></div><a class="card-arrow" href="https://rocketeleven.net/" target="_blank" rel="noopener noreferrer" aria-label="Visit Rocket Eleven">↗</a></div>
+          </article>
+
+          <article class="project-card card-clothing" style="--fan-rotate:2deg;--fan-y:-15px;--fan-order:4">
+            <div class="project-media">
+              <img class="project-poster" src="assets/projects/clothing-drop-studio.webp" alt="Clothing Drop Studio with its apparel design controls and a cap mockup" width="760" height="360" loading="lazy" decoding="async">
+              <iframe title="Live preview of Clothing Drop Studio" data-preview-src="https://clothing-drop-studio.pages.dev/" loading="eager" tabindex="-1" aria-hidden="true" allow="autoplay; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+              <span class="live-indicator"><i></i><span data-preview-status>WEBSITE PREVIEW</span></span>
+              <a class="preview-open" href="https://clothing-drop-studio.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Open Clothing Drop Studio in a new tab"></a>
+              <button class="preview-play" type="button" data-preview-play aria-label="Play live preview of Clothing Drop Studio"><span></span></button>
+            </div>
+            <div class="card-info"><span class="card-number">04</span><div><h2>Clothing Drop Studio</h2><p>Interactive apparel design experience</p></div><a class="card-arrow" href="https://clothing-drop-studio.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Visit Clothing Drop Studio">↗</a></div>
+          </article>
+
+          <article class="project-card card-campervan" style="--fan-rotate:6deg;--fan-y:4px;--fan-order:5">
+            <div class="project-media">
+              <img class="project-poster" src="assets/projects/campervan-man.webp" alt="The Campervan Man homepage showing a campervan conversion project" width="760" height="368" loading="lazy" decoding="async">
+              <iframe title="Live preview of The Campervan Man" data-preview-src="https://the-campervan-man.pages.dev/" loading="eager" tabindex="-1" aria-hidden="true" allow="autoplay; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+              <span class="live-indicator"><i></i><span data-preview-status>WEBSITE PREVIEW</span></span>
+              <a class="preview-open" href="https://the-campervan-man.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Open The Campervan Man in a new tab"></a>
+              <button class="preview-play" type="button" data-preview-play aria-label="Play live preview of The Campervan Man"><span></span></button>
+            </div>
+            <div class="card-info"><span class="card-number">05</span><div><h2>The Campervan Man</h2><p>Adelaide campervan conversion concept</p></div><a class="card-arrow" href="https://the-campervan-man.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Visit The Campervan Man">↗</a></div>
+          </article>
+
+          <article class="project-card card-stranger" style="--fan-rotate:9deg;--fan-y:32px;--fan-order:6">
+            <div class="project-media">
+              <div class="project-fallback stranger-fallback" aria-hidden="true"><span class="fallback-kicker">ADELAIDE · COFFEE HOUSE</span><span class="stranger-wordmark">Hello<br>Stranger</span><span class="coffee-cup"><i></i></span><span class="fallback-foot">SLOW MORNINGS / GOOD COFFEE</span></div>
+              <iframe title="Live preview of Hello Stranger" data-preview-src="https://hello-strange-coffee-shop.lucasderossag.workers.dev/" loading="eager" tabindex="-1" aria-hidden="true" allow="autoplay; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+              <span class="live-indicator"><i></i><span data-preview-status>WEBSITE PREVIEW</span></span>
+              <a class="preview-open" href="https://hello-strange-coffee-shop.lucasderossag.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="Open Hello Stranger in a new tab"></a>
+              <button class="preview-play" type="button" data-preview-play aria-label="Play live preview of Hello Stranger"><span></span></button>
+            </div>
+            <div class="card-info"><span class="card-number">06</span><div><h2>Hello Stranger</h2><p>Adelaide coffee shop and culture concept</p></div><a class="card-arrow" href="https://hello-strange-coffee-shop.lucasderossag.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="Visit Hello Stranger">↗</a></div>
+          </article>
+
+          <article class="project-card card-bernies" style="--fan-rotate:13deg;--fan-y:52px;--fan-order:7">
+            <div class="project-media">
+              <img class="project-poster" src="assets/projects/bernies.webp" alt="Bernie’s dark burger website with a featured burger and orange accents" width="760" height="577" loading="lazy" decoding="async">
+              <iframe title="Live preview of Bernie’s Burger Night" data-preview-src="https://bernies-burguer-night.pages.dev/" loading="eager" tabindex="-1" aria-hidden="true" allow="autoplay; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+              <img class="brand-stamp bernies-stamp" src="assets/projects/bernies-wordmark.webp" alt="" width="258" height="65" loading="lazy" decoding="async">
+              <span class="live-indicator"><i></i><span data-preview-status>WEBSITE PREVIEW</span></span>
+              <a class="preview-open" href="https://bernies-burguer-night.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Open Bernie’s Burger Night in a new tab"></a>
+              <button class="preview-play" type="button" data-preview-play aria-label="Play live preview of Bernie’s Burger Night"><span></span></button>
+            </div>
+            <div class="card-info"><span class="card-number">07</span><div><h2>Bernie’s</h2><p>Interactive burger and late-night brand experience</p></div><a class="card-arrow" href="https://bernies-burguer-night.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Visit Bernie’s Burger Night">↗</a></div>
+          </article>
+        </div>
+        <div class="deck-controls">
+          <span class="deck-hint">EXPLORE MY WORK</span>
+          <button type="button" class="deck-control" data-deck-prev aria-label="Scroll projects left">←</button>
+          <button type="button" class="deck-control" data-deck-next aria-label="Scroll projects right">→</button>
+          <span class="deck-count" aria-live="polite">01 / 07</span>
+        </div>
+      </div>
+
+      <div class="section-title reveal" id="selected-work">
+        <span class="section-number">01</span>
+        <h2 id="projects-title"><span>SELECTED</span> <em>WORK</em></h2>
+        <p>A collection of websites and technical projects I’ve built.</p>
+      </div>
+      <p class="projects-caption">SELECT A CARD TO OPEN THE LIVE PROJECT <span aria-hidden="true">↗</span></p>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="section-kicker"><span>02</span><span>ABOUT</span></div>
+      <div class="about-grid reveal">
+        <h2 id="about-title">Learning fast.<br><span>Building for real.</span></h2>
+        <div class="about-copy">
+          <p class="about-lead">I’m studying an Advanced Diploma of Information Technology in Adelaide, Australia.</p>
+          <p>My work sits between web development, practical IT, networking, visual communication, troubleshooting and documentation.</p>
+          <p>I learn by building, testing, breaking things, fixing them and writing down what I learn. This portfolio is my evidence as I move into the IT industry.</p>
+          <div class="about-tags" aria-label="Areas of interest"><span>WEB DEVELOPMENT</span><span>PRACTICAL IT</span><span>NETWORKING</span><span>DOCUMENTATION</span></div>
         </div>
       </div>
     </section>
 
-    <section class="projects" id="projects">
-      <div class="section-title">
-        <span>01</span>
-        <h2>SELECTED <i>WORK</i></h2>
-        <p>A collection of websites and technical projects I have built.</p>
+    <section class="technical" id="technical" aria-labelledby="technical-title">
+      <div class="technical-heading reveal">
+        <div class="section-kicker"><span>03</span><span>TECHNICAL WORK</span></div>
+        <h2 id="technical-title">The systems<br>behind the screens.</h2>
+        <p>Alongside web projects, I’m building practical IT knowledge through coursework, lab practice and documentation.</p>
+        <a class="pill-button pill-dark github-cta" href="https://github.com/orgs/lucas-derossa-it/dashboard" target="_blank" rel="noopener noreferrer">Explore my GitHub <span aria-hidden="true">↗</span></a>
       </div>
-
-      <div class="deck">
-        <article class="card" style="--r:-7deg;--y:24px">
-          <div class="preview"><iframe src="https://nicolasleautier.com/" title="Nicolas Leautier live preview" loading="lazy"></iframe></div>
-          <div class="card-meta"><span>01</span><div><h3>Nicolas Leautier</h3><p>Professional photographer & videographer portfolio</p></div><button data-preview="https://nicolasleautier.com/">↗</button></div>
-        </article>
-
-        <article class="card" style="--r:-4deg;--y:6px">
-          <div class="preview"><iframe src="https://studylikeapro.art/" title="Study Like a Pro live preview" loading="lazy"></iframe></div>
-          <div class="card-meta"><span>02</span><div><h3>Study Like a Pro</h3><p>Bilingual learning platform, resources & study methods</p></div><button data-preview="https://studylikeapro.art/">↗</button></div>
-        </article>
-
-        <article class="card black" style="--r:-1deg;--y:-12px">
-          <div class="preview"><iframe src="https://rocketeleven.net/" title="Rocket Eleven live preview" loading="lazy"></iframe></div>
-          <div class="card-meta"><span>03</span><div><h3>Rocket Eleven</h3><p>Personal high-impact web design project</p></div><button data-preview="https://rocketeleven.net/">↗</button></div>
-        </article>
-
-        <article class="card" style="--r:2deg;--y:0px">
-          <div class="preview"><iframe src="https://clothing-drop-studio.pages.dev/" title="Clothing Drop Studio live preview" loading="lazy"></iframe></div>
-          <div class="card-meta"><span>04</span><div><h3>Clothing Drop Studio</h3><p>Interactive apparel design experience for clothing drops</p></div><button data-preview="https://clothing-drop-studio.pages.dev/">↗</button></div>
-        </article>
-
-        <article class="card warm" style="--r:4deg;--y:14px">
-          <div class="preview"><iframe src="https://the-campervan-man.pages.dev/" title="The Campervan Man live preview" loading="lazy"></iframe></div>
-          <div class="card-meta"><span>05</span><div><h3>The Campervan Man</h3><p>Adelaide campervan conversion concept</p></div><button data-preview="https://the-campervan-man.pages.dev/">↗</button></div>
-        </article>
-
-        <article class="card black" style="--r:6deg;--y:30px">
-          <div class="preview"><iframe src="https://hello-strange-coffee-shop.lucasderossag.workers.dev/" title="Hello Stranger live preview" loading="lazy"></iframe></div>
-          <div class="card-meta"><span>06</span><div><h3>Hello Stranger</h3><p>Aesthetic Adelaide coffee shop concept</p></div><button data-preview="https://hello-strange-coffee-shop.lucasderossag.workers.dev/">↗</button></div>
-        </article>
-
-        <article class="card bernies" style="--r:8deg;--y:48px">
-          <div class="preview"><iframe src="https://bernies-burguer-night.pages.dev/" title="Bernie's live preview" loading="lazy"></iframe></div>
-          <div class="card-meta"><span>07</span><div><h3>Bernie's</h3><p>Interactive burger & late-night brand experience</p></div><button data-preview="https://bernies-burguer-night.pages.dev/">↗</button></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <p class="section-kicker">ABOUT</p>
-      <div class="about-grid">
-        <h2>Learning fast.<br>Building for real.</h2>
-        <div>
-          <p>I'm an Advanced Diploma of Information Technology student in Adelaide with hands-on experience building websites and technical projects.</p>
-          <p>My work sits between web development, practical IT, visual communication and problem solving. I learn by building, testing and documenting real outcomes.</p>
+      <div class="lab-panel reveal">
+        <div class="lab-topbar"><span class="lab-lights"><i></i><i></i><i></i></span><span>LAB NOTES / IN PROGRESS</span><span>ADL · 2026</span></div>
+        <div class="lab-body">
+          <p><span class="prompt">$</span> current focus</p>
+          <h3>Learn it.<br>Configure it.<br>Document it.</h3>
+          <div class="lab-topics"><span>CISCO PACKET TRACER</span><span>IOS BASICS</span><span>NETWORK FUNDAMENTALS</span><span>VLAN &amp; SWITCHING STUDY</span><span>OSI / TCP-IP</span><span>TROUBLESHOOTING</span></div>
+          <p class="lab-note"><span class="prompt">→</span> Lab topics are part of my ongoing study and practice.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <span>Lucas De Rossa © 2026</span>
-    <button type="button" data-contact>Let's connect</button>
+  <footer class="site-footer" id="contact">
+    <div class="footer-top reveal">
+      <div><span class="footer-eyebrow">HAVE A ROLE OR PROJECT IN MIND?</span><h2>Let’s connect.</h2></div>
+      <button class="footer-connect" type="button" data-contact-open aria-haspopup="dialog" aria-controls="contactDialog">Start a conversation <span aria-hidden="true">↗</span></button>
+    </div>
+    <div class="footer-bottom reveal">
+      <span>Lucas De Rossa © 2026</span>
+      <div class="footer-links"><a href="mailto:lucasderossag@gmail.com">lucasderossag@gmail.com</a><a href="tel:04211963410">04211 963 410</a></div>
+      <a class="back-top" href="#home">BACK TO TOP ↑</a>
+    </div>
   </footer>
 
-  <div class="modal" id="projectModal" aria-hidden="true">
-    <div class="backdrop" data-close-preview></div>
-    <div class="modal-panel">
-      <div class="modal-bar"><span>LIVE PREVIEW</span><div><a id="openProject" href="#" target="_blank" rel="noreferrer">Open site ↗</a><button data-close-preview>Close</button></div></div>
-      <iframe id="projectFrame" src="about:blank" title="Project preview"></iframe>
-    </div>
-  </div>
-
-  <div class="contact" id="contactPanel" aria-hidden="true">
-    <div class="backdrop" data-close-contact></div>
-    <div class="contact-card">
-      <button class="x" data-close-contact aria-label="Close">×</button>
-      <p class="section-kicker">LET'S CONNECT</p>
-      <h2>Have something in mind?</h2>
-      <p>I'm open to IT opportunities, web projects and collaborations.</p>
-      <div class="contact-links">
-        <a href="mailto:lucasderossag@gmail.com">lucasderossag@gmail.com</a>
-        <a href="tel:+614211963410">0421 196 341</a>
+  <div class="contact-dialog" id="contactDialog" role="dialog" aria-modal="true" aria-labelledby="contactTitle" aria-describedby="contactDescription" hidden>
+    <button class="dialog-backdrop" type="button" tabindex="-1" data-contact-close aria-label="Close contact panel"></button>
+    <div class="contact-panel">
+      <button class="dialog-close" type="button" data-contact-close aria-label="Close contact panel">×</button>
+      <p class="section-kicker"><span>CONTACT</span></p>
+      <h2 id="contactTitle">Let’s make<br>something real.</h2>
+      <p id="contactDescription">I’m open to entry-level IT opportunities, internships and thoughtful web projects.</p>
+      <div class="contact-options">
+        <a href="mailto:lucasderossag@gmail.com"><span>Email</span><strong>lucasderossag@gmail.com</strong><b aria-hidden="true">↗</b></a>
+        <a href="tel:04211963410"><span>Phone</span><strong>04211 963 410</strong><b aria-hidden="true">↗</b></a>
       </div>
+      <span class="contact-coordinate">ADELAIDE, SOUTH AUSTRALIA</span>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
