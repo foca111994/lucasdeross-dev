@@ -204,7 +204,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
   transform-style: preserve-3d;
   transform: rotateX(calc(-24deg + var(--letter-index) * 12deg));
   animation: portfolioRoll 4.8s linear infinite;
-  animation-delay: calc(var(--letter-index) * -.14s - .15s);
+  animation-delay: calc(var(--letter-index) * -.24s - .15s);
 }
 .letter-face {
   position: absolute;
@@ -507,7 +507,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
 @media (hover: none) { .avatar { filter: none; } .connect-mask { transform: none; background: rgba(0,0,0,.58); } }
 
 /* Engraved paper, optical depth, and botanical framing from the art reference. */
-.portfolio-scene { position: relative; isolation: isolate; background: radial-gradient(ellipse at 50% 21%,#fafaf8 0%,#eaece9 66%,#f1f2ef 100%); }
+.portfolio-scene { position: relative; isolation: isolate; background: radial-gradient(ellipse at 50% 21%,#fafaf9 0%,#ebebea 66%,#f1f1f0 100%); }
 .portfolio-scene::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .26; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.83' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23292b26' d='M0 0h180v180H0z' filter='url(%23grain)' opacity='.15'/%3E%3C/svg%3E"); }
 .hero { height: clamp(710px,62vw,830px); min-height: 710px; background: transparent; }
 .hero-grid { opacity: .13; background-size: 88px 88px; mask-image: radial-gradient(ellipse at 53% 43%,#000,transparent 68%); }
@@ -515,7 +515,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
 .hero-stipple { position: absolute; z-index: 1; pointer-events: none; background-image: radial-gradient(circle,#272a23 1px,transparent 1.2px); background-size: 9px 9px; mask-image: radial-gradient(ellipse,#000 0%,transparent 69%); }
 .stipple-left { top: 2%; left: 29%; width: 20%; height: 61%; opacity: .55; transform: rotate(-7deg); }
 .stipple-right { top: 4%; right: 21%; width: 18%; height: 64%; opacity: .28; transform: rotate(12deg); background-size: 13px 13px; }
-.hero-orbit { transform: rotate(-8deg); opacity: .83; }
+.hero-orbit { top: 2%; height: 78%; transform: rotate(-8deg); opacity: .83; }
 .hero-orbit ellipse { transform: rotate(-18deg); transform-origin: 720px 385px; }
 .hero-orbit path { stroke-width: .55; opacity: .5; }
 .hero-direction { position: absolute; top: 39%; z-index: 5; width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; }
@@ -528,7 +528,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
 .hero-copy { bottom: 9%; }
 .hero-copy p { font-size: clamp(11px,1vw,14px); }
 .hero-scroll { bottom: 7%; }
-.scene-foliage { position: absolute; z-index: 0; top: clamp(510px,43vw,620px); width: clamp(230px,27vw,420px); height: clamp(650px,66vw,920px); background: url("assets/fern-study.svg") center / 100% 100% no-repeat; pointer-events: none; opacity: .76; filter: blur(5px); transform-origin: center; }
+.scene-foliage { position: absolute; z-index: 0; top: clamp(510px,43vw,620px); width: clamp(230px,27vw,420px); height: clamp(650px,66vw,920px); background: url("assets/fern-study.svg") center / 100% 100% no-repeat; pointer-events: none; opacity: .76; filter: grayscale(1) blur(5px); transform-origin: center; }
 .foliage-left { left: -12%; transform: rotate(-31deg); }
 .foliage-right { right: -12%; transform: scaleX(-1) rotate(-31deg); }
 .scene-light-lines { position: absolute; inset: 36% 0 0; pointer-events: none; z-index: 0; overflow: hidden; opacity: .5; background: linear-gradient(30deg,transparent 49.94%,#fff 50%,transparent 50.06%),linear-gradient(151deg,transparent 49.94%,#fff 50%,transparent 50.06%); }
@@ -552,7 +552,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
   .hero-direction { top: 42%; border-top-width: 5px; border-bottom-width: 5px; }
   .direction-left { left: 3%; border-left-width: 6px; }
   .direction-right { right: 3%; border-right-width: 6px; }
-  .scene-foliage { top: 490px; width: 260px; height: 650px; opacity: .45; filter: blur(7px); }
+  .scene-foliage { top: 490px; width: 260px; height: 650px; opacity: .45; filter: grayscale(1) blur(7px); }
   .foliage-left { left: -185px; }
   .foliage-right { right: -185px; }
   .explore-orbit { width: 240px; height: 176px; margin-top: 23px; }
@@ -562,6 +562,6 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
 }
 @media (max-width: 420px) { .hero { height: 660px; min-height: 660px; } .hero-side { font-size: 7px; } .retro-computer { width: 98vw; } }
 @media (prefers-reduced-motion: reduce) {
-  .letter-drum { animation: none; transform: rotateX(calc(-24deg + var(--letter-index) * 12deg)); }
+  .letter-drum { animation: none; transform: rotateX(calc(-24deg + var(--letter-index) * 18deg)); }
   .retro-computer { animation: none; }
 }
