@@ -74,7 +74,8 @@
   const previewCleanup = new WeakMap();
   const visibleCards = new Set();
   let loadingPreviews = 0;
-  const maxConcurrentLoads = 3;
+  const maxConcurrentLoads = 1;
+  let activePreviewCard = null;
 
   const setStatus = (card, text) => {
     const label = card.querySelector("[data-preview-status]");
@@ -138,6 +139,13 @@
     previewQueue.push(card);
     pumpPreviewQueue();
   };
+
+  const activatePreview = (card) => {
+    if (!card || document.hidden || reducedMotion.matches || activePreviewCard === card) return;
+    if (activePreviewCard) stopPreview(activePreviewCard);
+    activePreviewCard = card;
+    startPreview(card);
+  };
   const stopPreview = (card) => {
     const frame = card.querySelector("iframe[data-preview-src]");
     if (!frame || !frame.dataset.previewState || frame.dataset.previewState === "idle") return;
@@ -160,34 +168,65 @@
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           visibleCards.add(entry.target);
-          if (!reducedMotion.matches && !document.hidden) startPreview(entry.target);
         } else {
           visibleCards.delete(entry.target);
-          stopPreview(entry.target);
+          if (activePreviewCard === entry.target) {
+            stopPreview(entry.target);
+            activePreviewCard = null;
+          }
         }
       });
-    }, { rootMargin: "120px 0px", threshold: 0.05 })
+
+      if (!activePreviewCard && visibleCards.size && !reducedMotion.matches && !document.hidden) {
+        const viewportCenter = window.innerWidth / 2;
+        const closest = [...visibleCards].sort((a, b) => {
+          const aRect = a.getBoundingClientRect();
+          const bRect = b.getBoundingClientRect();
+          const aCenter = aRect.left + aRect.width / 2;
+          const bCenter = bRect.left + bRect.width / 2;
+          return Math.abs(aCenter - viewportCenter) - Math.abs(bCenter - viewportCenter);
+        })[0];
+        activatePreview(closest);
+      }
+    }, { rootMargin: "0px", threshold: 0.05 })
     : null;
   const previewResizeObserver = "ResizeObserver" in window
     ? new ResizeObserver((entries) => entries.forEach((entry) => sizePreview(entry.target.closest(".project-card"))))
     : null;
   cards.forEach((card) => {
-    card.querySelector("[data-preview-play]")?.addEventListener("click", () => startPreview(card));
+    card.querySelector("[data-preview-play]")?.addEventListener("click", () => activatePreview(card));
+    card.addEventListener("pointerenter", () => activatePreview(card), { passive: true });
+    card.addEventListener("focusin", () => activatePreview(card));
     sizePreview(card);
     previewResizeObserver?.observe(card.querySelector(".project-media"));
     if (previewObserver) previewObserver.observe(card);
     else {
       visibleCards.add(card);
-      if (!reducedMotion.matches) startPreview(card);
+      if (!activePreviewCard && !reducedMotion.matches) activatePreview(card);
     }
   });
   document.addEventListener("visibilitychange", () => {
-    if (document.hidden) cards.forEach(stopPreview);
-    else if (!reducedMotion.matches) visibleCards.forEach(startPreview);
+    if (document.hidden) {
+      cards.forEach(stopPreview);
+      activePreviewCard = null;
+    } else if (!reducedMotion.matches && visibleCards.size) {
+      const viewportCenter = window.innerWidth / 2;
+      const closest = [...visibleCards].sort((a, b) => {
+        const aRect = a.getBoundingClientRect();
+        const bRect = b.getBoundingClientRect();
+        return Math.abs(aRect.left + aRect.width / 2 - viewportCenter) -
+          Math.abs(bRect.left + bRect.width / 2 - viewportCenter);
+      })[0];
+      activatePreview(closest);
+    }
   });
   reducedMotion.addEventListener("change", () => {
-    if (reducedMotion.matches) cards.forEach(stopPreview);
-    else if (!document.hidden) visibleCards.forEach(startPreview);
+    if (reducedMotion.matches) {
+      cards.forEach(stopPreview);
+      activePreviewCard = null;
+    } else if (!document.hidden && visibleCards.size) {
+      activatePreview([...visibleCards][0]);
+    }
   });
 
   const scrollDeck = (direction) => {
